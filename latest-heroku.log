@@ -1,0 +1,80 @@
+[33m2026-04-03T14:57:32.825332+00:00 heroku[run.9641]:[39m State changed from [38;5;40mup[39m to [38;5;40mcomplete[39m
+[1m[32m2026-04-03T15:16:48.310003+00:00 app[api]:[39m[22m Starting process with command [48;5;237m[38;5;255m[1m`env`[22m[39m[49m[32m by user carlo.nigro@x3energy.it[39m
+[33m2026-04-03T15:17:10.083731+00:00 heroku[run.9056]:[39m State changed from [93mstarting[39m to [38;5;40mup[39m
+[33m2026-04-03T15:17:13.255877+00:00 heroku[run.9056]:[39m Process exited with status [38;2;255;135;135m126[39m
+[33m2026-04-03T15:17:13.283103+00:00 heroku[run.9056]:[39m State changed from [38;5;40mup[39m to [38;5;40mcomplete[39m
+[1m[32m2026-04-03T15:20:49.950936+00:00 app[api]:[39m[22m Starting process with command [48;5;237m[38;5;255m[1m`/usr/bin/env`[22m[39m[49m[32m by user carlo.nigro@x3energy.it[39m
+[33m2026-04-03T15:21:12.277861+00:00 heroku[run.2707]:[39m State changed from [93mstarting[39m to [38;5;40mup[39m
+[33m2026-04-03T15:21:15.540360+00:00 heroku[run.2707]:[39m Process exited with status [38;2;255;135;135m126[39m
+[33m2026-04-03T15:21:15.562687+00:00 heroku[run.2707]:[39m State changed from [38;5;40mup[39m to [38;5;40mcomplete[39m
+[1m[32m2026-04-03T15:24:13.000000+00:00 app[api]:[39m[22m Build started by user [32mcarlo.nigro@x3energy.it[39m
+[1m[32m2026-04-03T15:25:56.000000+00:00 app[api]:[39m[22m [38;5;40mBuild succeeded[39m
+[1m[32m2026-04-03T15:25:56.632203+00:00 app[api]:[39m[22m Deploy [36mb983dbb9[39m by user [32mcarlo.nigro@x3energy.it[39m
+[1m[32m2026-04-03T15:25:56.632203+00:00 app[api]:[39m[22m Release [35mv26[39m created by user [32mcarlo.nigro@x3energy.it[39m
+[36m2026-04-03T15:25:57.796810+00:00 heroku[web.1]:[39m State changed from crashed to [93mstarting[39m
+[36m2026-04-03T15:26:24.825466+00:00 heroku[web.1]:[39m Starting process with command [48;5;237m[38;5;255m[1m`tini -- /docker-entrypoint.sh`[22m[39m[49m
+[36m2026-04-03T15:26:25.739544+00:00 app[web.1]:[39m Error: No such file or directory
+[36m2026-04-03T15:26:25.777144+00:00 heroku[web.1]:[39m Process exited with status [38;2;255;135;135m126[39m
+[36m2026-04-03T15:26:25.800471+00:00 heroku[web.1]:[39m State changed from [93mstarting[39m to crashed
+[36m2026-04-03T15:26:25.803800+00:00 heroku[web.1]:[39m State changed from crashed to [93mstarting[39m
+[36m2026-04-03T15:26:46.082822+00:00 heroku[web.1]:[39m Starting process with command [48;5;237m[38;5;255m[1m`tini -- /docker-entrypoint.sh`[22m[39m[49m
+[36m2026-04-03T15:26:46.742193+00:00 app[web.1]:[39m Error: No such file or directory
+[36m2026-04-03T15:26:46.815425+00:00 heroku[web.1]:[39m Process exited with status [38;2;255;135;135m126[39m
+[36m2026-04-03T15:26:46.836413+00:00 heroku[web.1]:[39m State changed from [93mstarting[39m to crashed
+[1m[32m2026-04-03T15:38:32.529898+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:39:36.124193+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:40:09.877957+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:41:54.000000+00:00 app[api]:[39m[22m Build started by user [32mcarlo.nigro@x3energy.it[39m
+[1m[32m2026-04-03T15:43:14.000000+00:00 app[api]:[39m[22m [38;5;40mBuild succeeded[39m
+[1m[32m2026-04-03T15:43:14.666667+00:00 app[api]:[39m[22m Release [35mv27[39m created by user [32mcarlo.nigro@x3energy.it[39m
+[1m[32m2026-04-03T15:43:14.666667+00:00 app[api]:[39m[22m Deploy [36md53c7ab8[39m by user [32mcarlo.nigro@x3energy.it[39m
+[36m2026-04-03T15:43:15.910273+00:00 heroku[web.1]:[39m State changed from crashed to [93mstarting[39m
+[36m2026-04-03T15:43:41.873289+00:00 heroku[web.1]:[39m Starting process with command [48;5;237m[38;5;255m[1m`tini -- /docker-entrypoint.sh`[22m[39m[49m
+[36m2026-04-03T15:43:42.747921+00:00 app[web.1]:[39m Error: No such file or directory
+[36m2026-04-03T15:43:42.786695+00:00 heroku[web.1]:[39m Process exited with status [38;2;255;135;135m126[39m
+[36m2026-04-03T15:43:42.811203+00:00 heroku[web.1]:[39m State changed from [93mstarting[39m to crashed
+[36m2026-04-03T15:43:42.814686+00:00 heroku[web.1]:[39m State changed from crashed to [93mstarting[39m
+[36m2026-04-03T15:44:07.345422+00:00 heroku[web.1]:[39m Starting process with command [48;5;237m[38;5;255m[1m`tini -- /docker-entrypoint.sh`[22m[39m[49m
+[36m2026-04-03T15:44:08.050141+00:00 app[web.1]:[39m Error: No such file or directory
+[36m2026-04-03T15:44:08.093221+00:00 heroku[web.1]:[39m Process exited with status [38;2;255;135;135m126[39m
+[36m2026-04-03T15:44:08.116164+00:00 heroku[web.1]:[39m State changed from [93mstarting[39m to crashed
+[1m[32m2026-04-03T15:45:29.393625+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:46:45.672872+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:48:04.597183+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:49:25.605916+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:50:45.350881+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:52:27.909225+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:53:44.071982+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:54:58.901199+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:56:21.258283+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:57:37.626964+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T15:59:19.887227+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T16:01:10.276920+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T16:02:33.419440+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T16:05:10.712301+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[36m2026-04-03T16:06:43.915887+00:00 heroku[web.1]:[39m State changed from crashed to [93mstarting[39m
+[36m2026-04-03T16:07:16.509804+00:00 heroku[web.1]:[39m Starting process with command [48;5;237m[38;5;255m[1m`tini -- /docker-entrypoint.sh`[22m[39m[49m
+[36m2026-04-03T16:07:17.621619+00:00 app[web.1]:[39m Error: No such file or directory
+[36m2026-04-03T16:07:17.667554+00:00 heroku[web.1]:[39m Process exited with status [38;2;255;135;135m126[39m
+[36m2026-04-03T16:07:17.703708+00:00 heroku[web.1]:[39m State changed from [93mstarting[39m to crashed
+[1m[32m2026-04-03T16:08:24.582728+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T16:10:28.904427+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T16:49:43.544679+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[36m2026-04-03T16:49:47.836782+00:00 heroku[web.1]:[39m State changed from crashed to [93mstarting[39m
+[36m2026-04-03T16:50:12.612422+00:00 heroku[web.1]:[39m Starting process with command [48;5;237m[38;5;255m[1m`tini -- /docker-entrypoint.sh`[22m[39m[49m
+[36m2026-04-03T16:50:13.504522+00:00 app[web.1]:[39m Error: No such file or directory
+[36m2026-04-03T16:50:13.547336+00:00 heroku[web.1]:[39m Process exited with status [38;2;255;135;135m126[39m
+[36m2026-04-03T16:50:13.571696+00:00 heroku[web.1]:[39m State changed from [93mstarting[39m to crashed
+[1m[32m2026-04-03T17:21:21.965619+00:00 app[api]:[39m[22m Log session created by user carlo.nigro@x3energy.it
+[1m[32m2026-04-03T17:21:43.570883+00:00 app[api]:[39m[22m Starting process with command [48;5;237m[38;5;255m[1m`/usr/bin/env`[22m[39m[49m[32m by user carlo.nigro@x3energy.it[39m
+[33m2026-04-03T17:22:07.876264+00:00 heroku[run.1656]:[39m State changed from [93mstarting[39m to [38;5;40mup[39m
+[33m2026-04-03T17:22:11.181733+00:00 heroku[run.1656]:[39m Process exited with status [38;2;255;135;135m127[39m
+[33m2026-04-03T17:22:11.202071+00:00 heroku[run.1656]:[39m State changed from [38;5;40mup[39m to [38;5;40mcomplete[39m
+[1m[32m2026-04-03T17:23:11.122030+00:00 app[api]:[39m[22m Starting process with command [48;5;237m[38;5;255m[1m`/usr/bin/env`[22m[39m[49m[32m by user carlo.nigro@x3energy.it[39m
+[33m2026-04-03T17:23:32.878086+00:00 heroku[run.1599]:[39m State changed from [93mstarting[39m to [38;5;40mup[39m
+[33m2026-04-03T17:23:36.082824+00:00 heroku[run.1599]:[39m Process exited with status [38;2;255;135;135m126[39m
+[33m2026-04-03T17:23:36.106001+00:00 heroku[run.1599]:[39m State changed from [38;5;40mup[39m to [38;5;40mcomplete[39m
+[1m[32m2026-04-03T17:23:55.210573+00:00 app[api]:[39m[22m Starting process with command [48;5;237m[38;5;255m[1m`/usr/bin/env`[22m[39m[49m[32m by user carlo.nigro@x3energy.it[39m
+[33m2026-04-03T17:24:16.901940+00:00 heroku[run.5100]:[39m State changed from [93mstarting[39m to [38;5;40mup[39m
+[33m2026-04-03T17:24:20.049257+00:00 heroku[run.5100]:[39m Process exited with status [38;2;255;135;135m126[39m
+[33m2026-04-03T17:24:20.075466+00:00 heroku[run.5100]:[39m State changed from [38;5;40mup[39m to [38;5;40mcomplete[39m
