@@ -1,3 +1,7 @@
 FROM n8nio/n8n:stable
+
 USER root
-ENTRYPOINT ["n8n"]
+WORKDIR /home/node
+ENTRYPOINT []
+COPY --chmod=755 entrypoint.sh /entrypoint.sh
+CMD ["/bin/sh", "/entrypoint.sh"]
