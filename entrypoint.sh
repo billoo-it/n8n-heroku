@@ -30,4 +30,4 @@ if [ "$DB_TYPE" = "postgresdb" ] || [ -n "$DATABASE_URL" ]; then
   export DB_POSTGRESDB_SCHEMA="${DB_POSTGRESDB_SCHEMA:-n8n}"
 fi
 
-exec /usr/local/bin/n8n
+exec node /usr/local/lib/node_modules/n8n/bin/n8n
