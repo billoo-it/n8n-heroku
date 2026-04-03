@@ -30,4 +30,8 @@ if [ "$DB_TYPE" = "postgresdb" ] || [ -n "$DATABASE_URL" ]; then
   export DB_POSTGRESDB_SCHEMA="${DB_POSTGRESDB_SCHEMA:-n8n}"
 fi
 
-exec /docker-entrypoint.sh "$@"
+if [ "$#" -gt 0 ]; then
+  exec n8n "$@"
+fi
+
+exec n8n
