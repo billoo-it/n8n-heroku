@@ -1,6 +1,6 @@
 FROM node:22-alpine
 
-RUN apk add --no-cache git openssh tini tzdata ca-certificates
+RUN apk add --no-cache git openssh tini tzdata ca-certificates python3
 RUN npm install -g n8n
 
 COPY entrypoint.sh /heroku-entrypoint.sh
