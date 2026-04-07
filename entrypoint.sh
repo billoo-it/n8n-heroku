@@ -1,4 +1,14 @@
 #!/bin/sh
+
+echo "=== Heroku n8n entrypoint ==="
+echo "PATH=$PATH"
+echo "Checking /docker-entrypoint.sh:" && ls -la /docker-entrypoint.sh 2>&1 || true
+echo "Checking n8n:" && ls -la /usr/local/bin/n8n 2>&1 || true
+echo "Checking node:" && which node 2>&1 || echo "node not in PATH"
+echo "Checking tini:" && which tini 2>&1 || echo "tini not in PATH"
+echo "Checking /usr/bin/env:" && ls -la /usr/bin/env 2>&1 || true
+echo "=== End diagnostics ==="
+
 set -e
 
 if [ -n "$PORT" ]; then
@@ -50,5 +60,5 @@ if [ "$DB_TYPE" = "postgresdb" ] || [ -n "$DATABASE_URL" ]; then
   export DB_POSTGRESDB_SCHEMA="${DB_POSTGRESDB_SCHEMA:-n8n}"
 fi
 
-# Delegate to the original n8n docker-entrypoint.sh
-exec /docker-entrypoint.sh "$@"
+# Start n8n
+exec /docker-entrypoint.sh
