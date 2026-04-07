@@ -6,22 +6,42 @@ if [ -n "$PORT" ]; then
   echo "N8N will start on port $N8N_PORT"
 fi
 
-parse_database_url() {
-  eval "$(echo "$1" | sed -e "s#^\(\(.*\)://\)\?\(\([^:@]*\)\(:\(.*\)\)\?@\)\?\([^/?]*\)\(/\(.*\)\)\?#N8N_DB_SCHEME='\2' N8N_DB_USER='\4' N8N_DB_PASSWORD='\6' N8N_DB_HOSTPORT='\7' N8N_DB_DATABASE='\9'#")"
-}
-
 if [ -n "$DATABASE_URL" ] && [ -z "$DB_POSTGRESDB_HOST" ]; then
-  parse_database_url "$DATABASE_URL"
+  # Parse DATABASE_URL using pure POSIX parameter expansion
+  # Format: postgres://user:password@host:port/database
+  _url="$DATABASE_URL"
 
-  DB_HOST="$(echo "$N8N_DB_HOSTPORT" | sed -e 's,:.*,,g')"
-  DB_PORT="$(echo "$N8N_DB_HOSTPORT" | sed -e 's,^.*:,:,g' -e 's,.*:\([0-9]*\).*,\1,g' -e 's,[^0-9],,g')"
+  # Strip scheme (everything up to and including "://")
+  _url="${_url#*://}"
+
+  # Split userinfo from hostpath at "@"
+  _userinfo="${_url%%@*}"
+  _hostpath="${_url#*@}"
+
+  # Extract user and password
+  _user="${_userinfo%%:*}"
+  _password="${_userinfo#*:}"
+
+  # Extract host:port and database
+  _hostport="${_hostpath%%/*}"
+  _database="${_hostpath#*/}"
+  # Strip query string from database name
+  _database="${_database%%\?*}"
+
+  # Extract host and port
+  _host="${_hostport%%:*}"
+  _port="${_hostport#*:}"
+  # Default to 5432 if no port specified
+  case "$_port" in
+    *[!0-9]*|"") _port="5432" ;;
+  esac
 
   export DB_TYPE="postgresdb"
-  export DB_POSTGRESDB_HOST="$DB_HOST"
-  export DB_POSTGRESDB_PORT="$DB_PORT"
-  export DB_POSTGRESDB_DATABASE="$N8N_DB_DATABASE"
-  export DB_POSTGRESDB_USER="$N8N_DB_USER"
-  export DB_POSTGRESDB_PASSWORD="$N8N_DB_PASSWORD"
+  export DB_POSTGRESDB_HOST="$_host"
+  export DB_POSTGRESDB_PORT="$_port"
+  export DB_POSTGRESDB_DATABASE="$_database"
+  export DB_POSTGRESDB_USER="$_user"
+  export DB_POSTGRESDB_PASSWORD="$_password"
   export DB_POSTGRESDB_SSL_ENABLED="${DB_POSTGRESDB_SSL_ENABLED:-true}"
   export DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED="${DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED:-false}"
 fi
